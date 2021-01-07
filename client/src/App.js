@@ -14,10 +14,16 @@ function App() {
       })
     }, []);
 
+    const addGuest = (guest) => {
+      const temp = guests.map(guest => guest);
+      temp.push(guest);
+      setGuests(temp);
+    }
+
   return (
     <>
       <h1>Pawnee Hotel</h1>
-      <GuestsForm />
+      <GuestsForm addGuest={addGuest}/>
       <GuestsGrid guests = {guests}/>
 
     </>
