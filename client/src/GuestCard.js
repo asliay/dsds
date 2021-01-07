@@ -4,17 +4,17 @@ const GuestCard = ({guest, removeGuest}) => {
   
 
   const statusDisplay = () => {
-    if (guest.status) {
+    if (guest.status === "checked in") {
     return (
       <>
-        <p>Checked In ✅</p>
+        <p>Checked In? ✅</p>
         <button>Check Out</button>
       </>
     )}
     else {
       return (
         <>
-          <p>Checked In ❌</p>
+          <p>Checked In? ❌</p>
           <button>Check In</button>
         </>
       )}

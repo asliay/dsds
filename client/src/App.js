@@ -28,6 +28,14 @@ function App() {
       setGuests(temp);
     }
 
+    // const updateGuestStatus = (id) => {
+    //   const temp = guests.map(guest => guest);
+    //   const indexToEdit = temp.map(guest => guest._id).indexOf(id);
+
+    //   temp.
+    // }
+
+
   return (
     <>
       <h1>Pawnee Hotel</h1>

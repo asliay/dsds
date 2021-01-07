@@ -5,16 +5,16 @@ db.guests.insertMany([
   {
     "name": "Ron Swanson",
     "email": "rswanson@pawnee.gov",
-    "status": false
+    "status": "checked out"
   },
   {
     "name": "Leslie Knope",
     "email": "lknope@pawnee.gov",
-    "status": false
+    "status": "checked out"
   },
   {
     "name": "Ann Perkins",
     "email": "aperkins@pawnee.gov",
-    "status": false
+    "status": "checked out"
   }
 ])
