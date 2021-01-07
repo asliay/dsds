@@ -20,11 +20,19 @@ function App() {
       setGuests(temp);
     }
 
+    const removeGuest = (id) => {
+      const temp = guests.map(guest => guest);
+      const indexToDelete = temp.map(guest => guest._id).indexOf(id);
+
+      temp.splice(indexToDelete, 1);
+      setGuests(temp);
+    }
+
   return (
     <>
       <h1>Pawnee Hotel</h1>
       <GuestsForm addGuest={addGuest}/>
-      <GuestsGrid guests = {guests}/>
+      <GuestsGrid guests = {guests} removeGuest={removeGuest}/>
 
     </>
   );

@@ -1,5 +1,6 @@
+import {deleteGuest} from "./GuestService"
 
-const GuestCard = ({guest}) => {
+const GuestCard = ({guest, removeGuest}) => {
   
 
   const statusDisplay = () => {
@@ -12,8 +13,18 @@ const GuestCard = ({guest}) => {
     )}
     else {
       return (
-        <button>Check In</button>
+        <>
+          <p>Checked In ❌</p>
+          <button>Check In</button>
+        </>
       )}
+  }
+
+  const handleDelete = () => {
+    deleteGuest(guest._id)
+      .then(() => {
+        removeGuest(guest._id);
+      })
   }
 
   return (
@@ -21,6 +32,7 @@ const GuestCard = ({guest}) => {
       <h3>Guest Name: {guest.name}</h3>
       <p>Email: {guest.email}</p>
       {statusDisplay()}
+      <button onClick={handleDelete}>🗑</button>
       <hr/>
     </>
   )

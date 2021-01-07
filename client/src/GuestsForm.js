@@ -30,9 +30,9 @@ const GuestsForm = ({addGuest}) => {
       </div>
       <div className="input">
         <label htmlFor="status">Checked in? </label>
-        <input onChange={onChange} type="radio" id="yes" name="status" value="true"/>
+        <input onChange={onChange} type="radio" id="status" name="status" value="true"/>
         <label htmlFor="yes">Yes</label>
-        <input onChange={onChange} type="radio" id="no" name="status" value="false"/>
+        <input onChange={onChange} type="radio" id="status" name="status" value="false"/>
         <label htmlFor="no">No</label>
       </div>
       <input type="submit" value="Save" id="save"/>

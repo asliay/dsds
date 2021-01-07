@@ -1,10 +1,10 @@
 import GuestCard from "./GuestCard"
 
 
-const GuestsGrid = ({guests}) => {
+const GuestsGrid = ({guests, removeGuest}) => {
   
   const guestList = guests.map((guest) => {
-    return <GuestCard guest = {guest}/>
+    return <GuestCard guest = {guest} removeGuest={removeGuest}/>
   })
 
   return (

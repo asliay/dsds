@@ -13,3 +13,9 @@ export const postGuest = (payload) => {
   })
   .then(res => res.json())
 }
+
+export const deleteGuest = (id) => {
+  return fetch(baseURL + id, {
+    method: 'DELETE'
+  })
+}
