@@ -18,7 +18,7 @@ function App() {
     <>
       <h1>Pawnee Hotel</h1>
       <GuestsForm />
-      <GuestsGrid />
+      <GuestsGrid guests = {guests}/>
 
     </>
   );
